@@ -1,0 +1,25 @@
+Seulement dans ZMySQLDA/: DABase.pyc
+Seulement dans ZMySQLDA/: DA.pyc
+diff -ru /home/seb/download/lib/python/Products/ZMySQLDA-2.0.9b2/db.py ZMySQLDA/db.py
+--- /home/seb/download/lib/python/Products/ZMySQLDA-2.0.9b2/db.py	2002-03-14 21:24:54.000000000 +0100
++++ ZMySQLDA/db.py	2003-04-28 10:29:38.000000000 +0200
+@@ -87,6 +87,7 @@
+ __version__='$Revision: 1.20 $'[11:-2]
+ 
+ import _mysql
++import MySQLdb
+ from _mysql_exceptions import OperationalError, NotSupportedError
+ MySQLdb_version_required = (0,9,2)
+ 
+@@ -165,6 +166,9 @@
+     Database_Connection=_mysql.connect
+     Database_Error=_mysql.Error
+ 
++    def Database_Connection(self, *args, **kwargs):
++      return MySQLdb.connect(*args, **kwargs)
++
+     defs={
+         FIELD_TYPE.CHAR: "i", FIELD_TYPE.DATE: "d",
+         FIELD_TYPE.DATETIME: "d", FIELD_TYPE.DECIMAL: "n",
+Seulement dans ZMySQLDA/: db.pyc
+Seulement dans ZMySQLDA/: __init__.pyc
