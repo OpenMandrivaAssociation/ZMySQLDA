@@ -5,7 +5,7 @@ Release:            4mdk
 Group:              Development/Python
 Requires:           zope MySQL-python
 License:            GPL
-URL:                http://www.erp5.org
+URL:                https://www.erp5.org
 Packager:           Sebastien Robin <seb@nexedi.com>
 BuildRoot:          %{_tmppath}/%{name}-%{version}-rootdir
 Buildarch:	noarch
